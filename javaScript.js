@@ -1,3 +1,5 @@
+// ALL THE BUTTONS ON THE CALCULATOR DEFINED
+
 const cSymbol = document.querySelector(".c");
 const percentageSymbol = document.querySelector(".percentage");
 const divideSymbol = document.querySelector(".divide");
@@ -18,15 +20,35 @@ const fullstopSymbol = document.querySelector(".full-stop");
 const equalSymbol = document.querySelector(".equal");
 const inputbox = document.querySelector(".input");
 
+
+// HEADER DEFINED
 const h1 = document.querySelector(".body--h1");
 
 
 
 
 // GET INPUT TO DISPLAY ZERO
-
- const ctozero = cSymbol.addEventListener("click", () => {
-        h1.innerHTML = "0";
+    cSymbol.addEventListener("click", () => {
+        h1.innerHTML = 0;
     });
+
+// ADDS ONE INTO H1 TAG
+    oneSymbol.addEventListener("click", () => {
+        let oneSymbol = 1;
+       h1.innerHTML = h1.innerHTML + oneSymbol;
+    });
+
+// ADDS TWO INTO H1 TAG
+    twoSymbol.addEventListener("click", () => {
+        let twoSymbol = 2;
+        h1.innerHTML = h1.innerHTML + twoSymbol;
+    });
+
+// EQUALS BOTH THE ONE AND TWO 
+    equalSymbol.addEventListener("click", () => {
+        
+        let equalSymbol = oneSymbol + twoSymbol
+        h1.innerHTML = h1.innerHTML + equalSymbol
+    })
 
    
