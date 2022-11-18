@@ -1,7 +1,21 @@
 @use "./variables" as *;
 
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgb(239, 185, 217), rgb(243, 213, 172));
+    }
+
 .calculator-container {
   border: 2px solid black;
+  width: 70vw;
+  height: 50vh;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
