@@ -21,6 +21,9 @@
 // const equalSymbol = document.querySelector(".equal");
 
 
+// let functionButton = Array.from(document.querySelectorAll(".function-button"));
+
+
 
 
 

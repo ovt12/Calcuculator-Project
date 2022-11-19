@@ -1,60 +1,54 @@
 // ALL THE BUTTONS ON THE CALCULATOR DEFINED
-const cSymbol = document.querySelector(".c");
-const inputbox = document.querySelector(".input");
-const equalSymbol = document.querySelector(".equal");
+let numbuttons = Array.from(document.querySelectorAll(".num-button"));
 
-
-
-
-// arrays for buttons and function buttons
-const buttons = Array.from(document.querySelectorAll(".num-button"));
-const functionButton = Array.from(
-  document.querySelectorAll(".function-button")
-);
-
-
-
+let cSymbol = document.querySelector(".c-symbol");
+let percentageSymbol = document.querySelector(".percentage");
+let divideSymbol = document.querySelector(".divide");
+let timesSymbol = document.querySelector(".times");
+let minusSymbol = document.querySelector(".minus");
+let plusSymbol = document.querySelector(".plus");
+let fullstopSymbol = document.querySelector(".full-stop");
+let equalSymbol = document.querySelector(".equal");
 
 //element for displaying the output of my functions
-let display = document.querySelector(".total-display");
+let displayOne = document.querySelector(".display-1");
+let displayTwo = document.querySelector(".display-2");
 
 let number = "";
 let symbol = "";
 
-//This input the numbers into display
+//This input the numbers into display with a click event
 
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    return (display.innerHTML += button.innerHTML);
+numbuttons.forEach((button) => {
+  button.addEventListener("click", (event) => {
+    displayOne.innerHTML += event.target.innerHTML;
   });
 });
 
 //function and click events to return the add/take/divide/times of a sum
+const totalSum = (e) => {
+  number = Number(displayOne.innerHTML);
+  symbol = e.target.innerHTML;
+  console.log(symbol);
+  displayOne.innerHTML = ""
+  console.log(number)
 
-functionButton.forEach((fButton) => {
-  fButton.addEventListener("click", () => {
-    symbol += fButton.innerHTML;
-    return (display.innerHTML += fButton.innerHTML);
-  });
-});
+};
+plusSymbol = addEventListener("click", totalSum);
+
+
+
+
+
+
 
 
 // Takes the 0 away from the display when clicked
-cSymbol.addEventListener("click", () => {
-  display.innerHTML = "";
-});
 
-
-//function button that uses equals
-equalSymbol.addEventListener("click", () => {
-  if (symbol === "%") {
-    alert("symbol has been set correctly")
-    display.innerText = number;
-  } else if (symbol === "+") {
-    number = number + Number(display.innerHTML);
-    display.innerHTML = answer;
-  }
-});
+const reset = (e) => {
+displayOne.innerHTML = ""
+}
+cSymbol.addEventListener("click", (reset))
 
 
 
@@ -62,6 +56,20 @@ equalSymbol.addEventListener("click", () => {
 
 
 
+// function button that uses all the function buttons
+
+const equals = (event) => {
+    if (symbol === "+") {
+        number += Number(displayOne.innerHTML)
+        displayOne.innerHTML = number
+    } 
+}
+
+equalSymbol.addEventListener("click", equals)
+
+
+
+//function to store result in first
 
 ////function and click event to show the current value as a percentage
 
