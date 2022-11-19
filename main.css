@@ -1,5 +1,22 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 button {
   background-color: #aa9f9f;
+}
+
+button:hover {
+  opacity: 50%;
 }
 
 .divide,
@@ -8,12 +25,6 @@ button {
 .plus,
 .equal {
   background-color: rgb(232, 155, 12);
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-  font-family: Gotham Rounded, sans-serif;
-  font-weight: normal;
 }
 
 body {

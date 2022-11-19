@@ -1,7 +1,23 @@
 @use "./variables" as *;
 
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 button {
     background-color: $color-grey-button;
+    
+}
+
+button:hover {
+    opacity: 50%;
 }
 
 .divide,
@@ -11,5 +27,7 @@ button {
 .equal {
     background-color: $color-orange-button;
 }
+
+
 
 
