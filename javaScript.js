@@ -28,16 +28,16 @@ numbuttons.forEach((button) => {
 //function and click events to return the add/take/divide/times of a sum
 const calculationTotal = (e) => {
   number = Number(displayOne.innerHTML);
-  symbol = e.target.innerHTML;
+  symbol = e.target.innerText;
   displayOne.innerHTML = "";
   console.log(number)
   console.log(symbol)
 };
 
-divideSymbol = addEventListener("click", calculationTotal);
-timesSymbol = addEventListener("click", calculationTotal);
-minusSymbol = addEventListener("click", calculationTotal);
-plusSymbol = addEventListener("click", calculationTotal);
+divideSymbol = divideSymbol.addEventListener("click", calculationTotal);
+timesSymbol = timesSymbol.addEventListener("click", calculationTotal);
+minusSymbol = minusSymbol.addEventListener("click", calculationTotal);
+plusSymbol = plusSymbol.addEventListener("click", calculationTotal);
 
 // Takes the 0 away from the display when clicked
 
@@ -58,7 +58,7 @@ const equals = (event) => {
   } else if (symbol === "x") {
     number *= Number(displayOne.innerHTML);
     displayOne.innerHTML = number;
-  } else if (number === "/") {
+  } else if (symbol === "/") {
     number /= Number(displayOne.innerHTML);
     displayOne.innerHTML = number;
   }
