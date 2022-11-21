@@ -9,7 +9,7 @@ let minusSymbol = document.querySelector(".minus");
 let plusSymbol = document.querySelector(".plus");
 let fullstopSymbol = document.querySelector(".full-stop");
 let equalSymbol = document.querySelector(".equal");
-
+let plusMinusSymbol = document.querySelector(".plus-minus");
 
 //element for displaying the output of my functions
 let displayOne = document.querySelector(".display-1");
@@ -71,11 +71,24 @@ equalSymbol.addEventListener("click", equals);
 ////function and click event to show the current value as a percentage
 
 const percent = (event) => {
-    number = Number(displayOne.innerHTML)
-    number = number / 100
-    displayOne.innerHTML = number
-}
+  number = Number(displayOne.innerHTML);
+  number = number / 100;
+  displayOne.innerHTML = number;
+};
 
-percentageSymbol.addEventListener("click", percent)
+percentageSymbol.addEventListener("click", percent);
 
 //function and click event to make numbers negative
+
+const changeNegative = (event) => {
+  number = Number(displayOne.innerHTML);
+  if (displayOne.innerHTML.includes("-")) {
+    number = Math.abs(number);
+    displayOne.innerHTML = number;
+  } else {
+    number = -Math.abs(number);
+    displayOne.innerHTML = number;
+  }
+};
+
+plusMinusSymbol.addEventListener("click", changeNegative);
