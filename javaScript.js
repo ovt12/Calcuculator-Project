@@ -10,6 +10,7 @@ let plusSymbol = document.querySelector(".plus");
 let fullstopSymbol = document.querySelector(".full-stop");
 let equalSymbol = document.querySelector(".equal");
 
+
 //element for displaying the output of my functions
 let displayOne = document.querySelector(".display-1");
 let displayTwo = document.querySelector(".display-2");
@@ -29,9 +30,10 @@ numbuttons.forEach((button) => {
 const calculationTotal = (e) => {
   number = Number(displayOne.innerHTML);
   symbol = e.target.innerText;
+  console.log(symbol);
   displayOne.innerHTML = "";
-  console.log(number)
-  console.log(symbol)
+  console.log(number);
+  console.log(symbol);
 };
 
 divideSymbol = divideSymbol.addEventListener("click", calculationTotal);
@@ -68,5 +70,12 @@ equalSymbol.addEventListener("click", equals);
 
 ////function and click event to show the current value as a percentage
 
-//function and click event to make numbers negative
+const percent = (event) => {
+    number = Number(displayOne.innerHTML)
+    number = number / 100
+    displayOne.innerHTML = number
+}
 
+percentageSymbol.addEventListener("click", percent)
+
+//function and click event to make numbers negative
