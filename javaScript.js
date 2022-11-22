@@ -31,6 +31,7 @@ const calculationTotal = (e) => {
   number = Number(displayOne.innerHTML);
   symbol = e.target.innerText;
   console.log(symbol);
+  console.log(e);
   displayOne.innerHTML = "";
   console.log(number);
   console.log(symbol);
