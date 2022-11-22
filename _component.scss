@@ -28,6 +28,18 @@ button:hover {
     background-color: $color-orange-button;
 }
 
+// Media Screens to make it viewable
+
+@media screen and (min-width:$tablet-breakpoint){
+ 
+    body {
+        .calculator-container {
+            width: 50vw;
+            height: 70vh;
+        }
+    }
+}
+
 @media screen and (min-width:$desktop-breakpoint){
  
     body {
@@ -37,5 +49,7 @@ button:hover {
         }
     }
 }
+
+
 
 

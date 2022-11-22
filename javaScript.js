@@ -26,6 +26,8 @@ numbuttons.forEach((button) => {
   });
 });
 
+
+// function which has click events that utilise the +/-/divide/times
 //function and click events to return the add/take/divide/times of a sum
 const calculationTotal = (e) => {
   number = Number(displayOne.innerHTML);
