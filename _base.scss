@@ -7,15 +7,15 @@
     background: linear-gradient(to right, rgb(239, 185, 217), rgb(243, 213, 172));
     }
 
-.calculator-container {
-  border: 2px solid black;
-  width: 70vw;
-  height: 50vh;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  .calculator-container {
+    border: 2px solid black;
+    width: 70vw;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 .c-symbol {

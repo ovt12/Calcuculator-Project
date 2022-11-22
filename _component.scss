@@ -3,7 +3,7 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: Gotham Rounded, sans-serif;
-    font-weight: normal;
+    font-weight: bold;
   }
 body {
     display: flex;
@@ -28,6 +28,14 @@ button:hover {
     background-color: $color-orange-button;
 }
 
-
+@media screen and (min-width:$desktop-breakpoint){
+ 
+    body {
+        .calculator-container {
+            width: 50vw;
+            height: 70vh;
+        }
+    }
+}
 
 
