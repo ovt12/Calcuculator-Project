@@ -34,6 +34,7 @@ const calculationTotal = (e) => {
   symbol = e.target.innerText;
   console.log(symbol);
   console.log(e);
+  displayTwo.innerHTML = number + symbol
   displayOne.innerHTML = "";
   console.log(number);
   console.log(symbol);
@@ -48,12 +49,14 @@ plusSymbol = plusSymbol.addEventListener("click", calculationTotal);
 
 const reset = (event) => {
   displayOne.innerHTML = "";
+  displayTwo.innerHTML = "";
 };
 cSymbol.addEventListener("click", reset);
 
 // function button that uses all the function buttons
 
 const equals = (event) => {
+  displayTwo.innerHTML = "";
   if (symbol === "+") {
     number += Number(displayOne.innerHTML);
     displayOne.innerHTML = number;
@@ -76,7 +79,7 @@ equalSymbol.addEventListener("click", equals);
 const percent = (event) => {
   number = Number(displayOne.innerHTML);
   number = number / 100;
-  displayOne.innerHTML = number;
+  displayOne.innerHTML = number + "%";
 };
 
 percentageSymbol.addEventListener("click", percent);
@@ -95,3 +98,7 @@ const changeNegative = (event) => {
 };
 
 plusMinusSymbol.addEventListener("click", changeNegative);
+
+// DislayTwo shows the calculation
+
+
