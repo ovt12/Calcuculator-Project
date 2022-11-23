@@ -79,7 +79,7 @@ equalSymbol.addEventListener("click", equals);
 const percent = (event) => {
   number = Number(displayOne.innerHTML);
   number = number / 100;
-  displayOne.innerHTML = number + "%";
+  displayOne.innerHTML = number;
 };
 
 percentageSymbol.addEventListener("click", percent);
