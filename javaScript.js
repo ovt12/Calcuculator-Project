@@ -1,6 +1,5 @@
 // ALL THE BUTTONS ON THE CALCULATOR DEFINED
 let numbuttons = Array.from(document.querySelectorAll(".num-button"));
-
 let cSymbol = document.querySelector(".c-symbol");
 let percentageSymbol = document.querySelector(".percentage");
 let divideSymbol = document.querySelector(".divide");
@@ -15,6 +14,7 @@ let plusMinusSymbol = document.querySelector(".plus-minus");
 let displayOne = document.querySelector(".display-1");
 let displayTwo = document.querySelector(".display-2");
 
+// Variables that store result of the number or symbol
 let number = "";
 let symbol = "";
 
@@ -34,8 +34,8 @@ const calculationTotal = (e) => {
   symbol = e.target.innerText;
   console.log(symbol);
   console.log(e);
-  displayTwo.innerHTML = number + symbol
   displayOne.innerHTML = "";
+  displayTwo.innerHTML = number + symbol
   console.log(number);
   console.log(symbol);
 };
@@ -99,6 +99,6 @@ const changeNegative = (event) => {
 
 plusMinusSymbol.addEventListener("click", changeNegative);
 
-// DislayTwo shows the calculation
+
 
 
