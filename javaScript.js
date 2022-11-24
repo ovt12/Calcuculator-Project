@@ -1,4 +1,4 @@
-// ALL THE BUTTONS ON THE CALCULATOR DEFINED
+// ALL THE BUTTONS ON THE CALCULATOR DEFINED // NUMBERS DEFINED WITHIN AN ARRAY
 let numbuttons = Array.from(document.querySelectorAll(".num-button"));
 let cSymbol = document.querySelector(".c-symbol");
 let percentageSymbol = document.querySelector(".percentage");
@@ -10,15 +10,16 @@ let fullstopSymbol = document.querySelector(".full-stop");
 let equalSymbol = document.querySelector(".equal");
 let plusMinusSymbol = document.querySelector(".plus-minus");
 
-//element for displaying the output of my functions
+//DISPLAY ELEMENTS DEFINED THEY ARE SET AS DIV'S
 let displayOne = document.querySelector(".display-1");
 let displayTwo = document.querySelector(".display-2");
 
-// Variables that store result of the number or symbol
+// VARIABLES DEFINED THAT STORE THE VALUE OF THE EVENT 
 let number = "";
 let symbol = "";
 
-//This input the numbers into display with a click event
+
+// EVENT WHERE THE NUMBERS WHEN CLICKED SHOW IN THE DISPLAY
 
 numbuttons.forEach((button) => {
   button.addEventListener("click", (event) => {
@@ -27,17 +28,16 @@ numbuttons.forEach((button) => {
 });
 
 
-// function which has click events that utilise the +/-/divide/times
-//function and click events to return the add/take/divide/times of a sum
+
+// THIS FUNCTIONS ADDS VALUE TO THE NUMBER AND THE SYMBOL TO THE 
+// VARIABLE WHILST DISPLAYING THIS WHEN EVENT IS CALLED.
+
 const calculationTotal = (e) => {
   number = Number(displayOne.innerHTML);
   symbol = e.target.innerText;
-  console.log(symbol);
-  console.log(e);
+
   displayOne.innerHTML = "";
   displayTwo.innerHTML = number + symbol
-  console.log(number);
-  console.log(symbol);
 };
 
 divideSymbol = divideSymbol.addEventListener("click", calculationTotal);
@@ -45,7 +45,8 @@ timesSymbol = timesSymbol.addEventListener("click", calculationTotal);
 minusSymbol = minusSymbol.addEventListener("click", calculationTotal);
 plusSymbol = plusSymbol.addEventListener("click", calculationTotal);
 
-// Takes the 0 away from the display when clicked
+
+// RESETS THE DISPLAYS TO HAVING NOTHING IN THEM
 
 const reset = (event) => {
   displayOne.innerHTML = "";
@@ -53,7 +54,8 @@ const reset = (event) => {
 };
 cSymbol.addEventListener("click", reset);
 
-// function button that uses all the function buttons
+
+// FUNCTION FOR WHEN THE EQUAL EVENT HAPPENS THE MATHS IS DONE (PLUS, TAKE, TIMES, DIVIDE)
 
 const equals = (event) => {
   displayTwo.innerHTML = "";
@@ -74,7 +76,8 @@ const equals = (event) => {
 
 equalSymbol.addEventListener("click", equals);
 
-////function and click event to show the current value as a percentage
+
+// FUNCTION FOR THE PERCENTAGE BUTTON TO WORK
 
 const percent = (event) => {
   number = Number(displayOne.innerHTML);
@@ -84,7 +87,7 @@ const percent = (event) => {
 
 percentageSymbol.addEventListener("click", percent);
 
-//function and click event to make numbers negative
+// FUNCTION TO TURN NUMBER IN THE DISPLAY TO NEGATIVE OR POSITIVE
 
 const changeNegative = (event) => {
   number = Number(displayOne.innerHTML);
